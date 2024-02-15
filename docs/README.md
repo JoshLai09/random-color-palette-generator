@@ -9,7 +9,9 @@ Built with HTML/CSS and JavaScript
 
 Palette generating API: [Huemint](https://huemint.com/about#:~:text=)
 
-## Screenshots
+## Screenshots and demo
+Live demo: [Github pages](https://joshlai09.github.io/random-color-palette-generator/src/index.html)
+
 Desktop:
 
 <img src="desktop.png" height="400">
