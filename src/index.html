@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Color Palette Generator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=0.75" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="functions.js"></script>
+</head>
+
+<body onkeydown="keyCommands(event)" onkeyup="keyUp()">
+    <h1>Color Palette Generator</h1>
+    <div id="palette-container" data-value="">
+        <div class="color-card" data-value="" tabindex="0" onclick="copy(this)">
+            <div class="color"></div>
+            <button class="lock" onclick="lock(event, 0)" data-locked="false">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                    <path d="M7 11V7a5 5 0 0 1 9.9-1" />
+                </svg>
+            </button>
+        </div>
+        <div class="color-card" data-value="" tabindex="0" onclick="copy(this)">
+            <div class="color"></div>
+            <button class="lock" onclick="lock(event, 1)" data-locked="false">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                    <path d="M7 11V7a5 5 0 0 1 9.9-1" />
+                </svg>
+            </button>
+        </div>
+        <div class="color-card" data-value="" tabindex="0" onclick="copy(this)">
+            <div class="color"></div>
+            <button class="lock" onclick="lock(event, 2)" data-locked="false">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                    <path d="M7 11V7a5 5 0 0 1 9.9-1" />
+                </svg>
+            </button>
+        </div>
+        <div class="color-card" data-value="" tabindex="0" onclick="copy(this)">
+            <div class="color"></div>
+            <button class="lock" onclick="lock(event, 3)" data-locked="false">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                    <path d="M7 11V7a5 5 0 0 1 9.9-1" />
+                </svg>
+            </button>
+        </div>
+        <div class="color-card" data-value="" tabindex="0" onclick="copy(this)">
+            <div class="color"></div>
+            <button class="lock" onclick="lock(event, 4)" data-locked="false">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                    <path d="M7 11V7a5 5 0 0 1 9.9-1" />
+                </svg>
+            </button>
+        </div>
+    </div>
+    <button id="generate" onclick="generate()" tabindex="0" autofocus>Generate palette</button>
+    <p>Or press "n" to generate a new palette</p>
+    <p id="copy-instructions">Click to copy individual color | Press "c" to copy entire palette</p>
+    <p id="alert"></p>
+    <script>
+        generate();
+
+        if (navigator.userAgentData.mobile || navigator.userAgent.match(/Mobile/)) {
+            document.getElementById("copy-instructions").innerHTML = "Tap to copy individual color | Press this to copy entire palette";
+            document.getElementById("copy-instructions").addEventListener("click", copyAll);
+            document.getElementById("copy-instructions").tabIndex = "0";
+        }
+
+    </script>
+</body>
+
+</html>
